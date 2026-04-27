@@ -104,9 +104,39 @@ Bloque blanco con borde lateral izquierdo `--color-tierra` de 6px. Listado de fe
 
 ### Cards institucionales (página Institucional)
 
-- Grilla de 2 columnas
+La página Institucional contiene cuatro componentes principales:
+
+**1. Bloque "¿Qué es la SEP?"** (`.inst-twocol`)
+- Layout de dos columnas (texto + highlights laterales)
+- La columna de texto lleva un párrafo "lead" destacado con borde lateral azul de 3px
+- En la columna derecha, tres tarjetas de highlight (mandato, autonomía, sede)
+
+**2. Highlights laterales** (`.highlight-card`)
+- Bloques con borde lateral de 4px y fondo tenue del mismo color
+- Tres variantes: por defecto (azul acento), `.dorado`, `.tierra`
+- Cada uno lleva un ícono SVG en el título uppercase
+
+**3. Cards Misión/Visión/Valores** (`.mvv-card`)
+- Grilla de 3 columnas
+- Borde superior azul (`--color-acento-azul`) de 5px
+- Ícono SVG circular con fondo `#eaf0f6` arriba a la izquierda
+
+**4. Cards de los 5 valores** (`.val-card`)
+- Grilla de 5 columnas con padding chico
+- Borde inferior dorado de 3px
+- Ícono SVG centrado, título y descripción breve
+
+**5. Tarjeta del Secretario** (`.secretario-card`)
+- Layout de dos columnas (foto + info)
+- Borde superior dorado para destacar jerarquía
+- Tags al pie en píldoras color secundario
+
+### Cards institucionales originales (legado)
+
+- Grilla de 2 columnas (`.inst-grid` + `.inst-box`)
 - Borde superior azul (`--color-acento-azul`) o dorado para destacar
 - Padding generoso (40px)
+- *Estos estilos siguen disponibles en el CSS por si se quieren reutilizar en otras páginas.*
 
 ### Footer
 
