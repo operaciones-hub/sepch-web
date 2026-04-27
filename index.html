@@ -38,7 +38,19 @@
             gap: 15px;
         }
         .logo-placeholder {
-            width: 50px; height: 50px; background: var(--color-principal); border-radius: 50%;
+            width: 55px; 
+            height: 55px; 
+            background: transparent; /* Quitamos el color de fondo */
+            border-radius: 50%;
+            overflow: hidden; /* Esto obliga a la imagen a ser circular */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .logo-placeholder img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Mantiene la proporción de tu logo */
         }
         .logo-text h1 { margin: 0; font-size: 20px; color: var(--color-principal); }
         .logo-text p { margin: 0; font-size: 10px; text-transform: uppercase; color: var(--color-tierra); letter-spacing: 1px; }
@@ -369,7 +381,9 @@
 
     <header>
         <div class="logo-container">
-            <div class="logo-placeholder"></div>
+            <div class="logo-placeholder">
+                <img src="img/logoazulsep.png" alt="Logo Secretaría Electoral">
+            </div>
             <div class="logo-text">
                 <h1>Secretaría Electoral Permanente</h1>
                 <p>Provincia del Chubut · Portal Oficial</p>
