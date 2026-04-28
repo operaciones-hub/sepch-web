@@ -37,23 +37,27 @@
             align-items: center;
             gap: 15px; /* Más espacio entre logo y texto */
         }
-      .logo-img-header {
-            width: 140px; /* Tamaño ideal para visibilidad clara */
-            height: auto; /* Mantiene la proporción original */
+      /* Tamaño del logo aumentado para máxima visibilidad */
+        .logo-img-header {
+            width: 220px; /* Tamaño más grande y legible */
+            height: auto;
             display: block;
             object-fit: contain;
-            /* Filtro opcional para dar nitidez */
-            filter: drop-shadow(0px 2px 4px rgba(0,0,0,0.1)); 
+            transition: transform 0.3s ease; /* Efecto suave si decides moverlo */
         }
-        
-        .logo-placeholder img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain; /* Usamos 'contain' para que el logo se vea completo sin recortarse */
-            padding: 5px; /* Pequeño margen interno para que el logo no toque los bordes del círculo */
+
+        /* Ajuste para que el contenedor del logo y el texto se vea equilibrado */
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 25px; /* Un poco más de espacio entre el logo grande y el texto */
         }
-        .logo-text h1 { margin: 0; font-size: 20px; color: var(--color-principal); }
-        .logo-text p { margin: 0; font-size: 10px; text-transform: uppercase; color: var(--color-tierra); letter-spacing: 1px; }
+
+        .logo-text h1 {
+            font-size: 24px; /* Aumentamos un punto el texto para que no quede chico al lado del logo */
+            color: var(--color-principal);
+            margin: 0;
+        }
 
         .search-box {
             background: #f0f2f5;
