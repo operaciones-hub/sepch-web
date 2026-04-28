@@ -700,103 +700,98 @@
         </div>
     </div>
 
-    <footer>
-        <div class="footer-main">
-            <div class="footer-brand">
-                <h2>Secretaría Electoral Permanente</h2>
-                <div class="social-row">
-        <div class="social-icon" title="Instagram">IG</div>
-        <div class="social-icon" title="Facebook">FB</div>
-        <div class="social-icon" title="X">X</div>
-        <div class="social-icon" title="TikTok">TK</div>
-        <div class="social-icon" title="WhatsApp">WA</div>
-        <div class="social-icon" title="YouTube">YT</div>
-    </div>
+   </div> 
+
+    <div id="registros" class="page" style="display: none; flex-direction: column; min-height: 85vh; background-color: #f8f9fa;">
+        
+        <section style="background: linear-gradient(rgba(15, 26, 48, 0.7), rgba(15, 26, 48, 0.7)), url('https://images.unsplash.com/photo-1540910419892-f7efad998b54?auto=format&fit=crop&w=1600&q=80') center/cover; padding: 100px 0; color: white; text-align: center;">
+            <div class="container">
+                <h2 style="font-family: 'Merriweather', serif; font-size: 3rem; margin-bottom: 20px;">Registros Electorales</h2>
+                <p style="font-size: 1.2rem; margin-bottom: 40px; opacity: 0.9;">Consulte el Padrón, autoridades de mesa y registros oficiales</p>
+                
+                <div style="max-width: 750px; margin: 0 auto; background: white; padding: 10px; border-radius: 50px; display: flex; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
+                    <input type="text" placeholder="Ingrese DNI o nombre del trámite..." style="flex: 1; border: none; padding: 15px 25px; border-radius: 50px; outline: none; font-size: 1.1rem; color: #333;">
+                    <button style="background: var(--color-principal); color: white; border: none; padding: 0 35px; border-radius: 50px; cursor: pointer; font-weight: bold; transition: 0.3s;" onmouseover="this.style.background='var(--color-oscuro)'" onmouseout="this.style.background='var(--color-principal)'">
+                        BUSCAR
+                    </button>
+                </div>
             </div>
-            <div class="footer-cols">
+        </section>
+
+        <div class="container" style="flex: 1; padding: 60px 8%;">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px;">
+                
+                <div class="registro-card" style="text-align: center; border-left: none; border-bottom: 4px solid var(--color-dorado); height: 100%;">
+                    <div style="font-size: 3rem; margin-bottom: 15px;">🔍</div>
+                    <h3>Padrón Definitivo</h3>
+                    <p>Consulte su lugar de votación y mesa asignada para los próximos comicios.</p>
+                    <button class="btn-registro" style="align-self: center; margin-top: auto;">Consultar Padrón</button>
+                </div>
+
+                <div class="registro-card" style="text-align: center; border-left: none; border-bottom: 4px solid var(--color-dorado); height: 100%;">
+                    <div style="font-size: 3rem; margin-bottom: 15px;">🗳️</div>
+                    <h3>Autoridades de Mesa</h3>
+                    <p>Postulaciones, capacitaciones y consulta de designaciones oficiales.</p>
+                    <button class="btn-registro" style="align-self: center; margin-top: auto;">Ver Información</button>
+                </div>
+
+                <div class="registro-card" style="text-align: center; border-left: none; border-bottom: 4px solid var(--color-dorado); height: 100%;">
+                    <div style="font-size: 3rem; margin-bottom: 15px;">⚖️</div>
+                    <h3>Justificación de Voto</h3>
+                    <p>Trámite para ciudadanos que no pudieron asistir a votar en los últimos comicios.</p>
+                    <button class="btn-registro" style="align-self: center; margin-top: auto;">Iniciar Trámite</button>
+                </div>
+
+                <div class="registro-card" style="text-align: center; border-left: none; border-bottom: 4px solid var(--color-dorado); height: 100%;">
+                    <div style="font-size: 3rem; margin-bottom: 15px;">📝</div>
+                    <h3>Registro de Afiliados</h3>
+                    <p>Consulta de afiliación partidaria y renuncias a agrupaciones políticas.</p>
+                    <button class="btn-registro" style="align-self: center; margin-top: auto;">Consultar</button>
+                </div>
+
+            </div>
+        </div>
+    </div> <footer style="background: var(--color-oscuro); padding: 70px 8% 40px 8%; color: var(--color-secundario-azul);">
+        <div class="footer-main" style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 50px;">
+            <div class="footer-brand">
+                <h2 style="color: white; margin-bottom: 25px;">Secretaría Electoral Permanente</h2>
+                <div class="social-row" style="display: flex; gap: 15px;">
+                    <div class="social-icon">IG</div>
+                    <div class="social-icon">FB</div>
+                    <div class="social-icon">X</div>
+                    <div class="social-icon">TK</div>
+                    <div class="social-icon">WA</div>
+                    <div class="social-icon">YT</div>
+                </div>
+            </div>
+            <div class="footer-cols" style="display: flex; gap: 60px;">
                 <div class="f-col">
-                    <h4>Secciones</h4>
+                    <h4 style="color: var(--color-dorado); margin-bottom: 20px;">Secciones</h4>
                     <p>Padrón Electoral</p>
                     <p>Elecciones</p>
                     <p>Partidos Políticos</p>
                 </div>
                 <div class="f-col">
-                    <h4>Información</h4>
+                    <h4 style="color: var(--color-dorado); margin-bottom: 20px;">Información</h4>
                     <p>Normativa Vigente</p>
                     <p>Resoluciones</p>
-                    <p>Gacetillas de Prensa</p>
-                </div>
-                <div class="f-col">
-                    <h4>Contacto</h4>
-                    <p>Rawson (Sede Central)</p>
-                    <p>Comodoro Rivadavia</p>
-                    <p>Esquel</p>
+                    <p>Gacetillas</p>
                 </div>
             </div>
         </div>
-        <div class="copy-line">
-            &copy; 2026 Secretaría Electoral Permanente de Chubut · Provincia del Chubut · Todos los derechos reservados.
+        <div class="copy-line" style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 25px; text-align: center; font-size: 12px;">
+            &copy; 2026 Secretaría Electoral Permanente de Chubut · Todos los derechos reservados.
         </div>
-        <div id="registros" class="page" style="display: none; flex-direction: column; min-height: 85vh; background-color: #f8f9fa;">
-    
-    <section style="background: linear-gradient(rgba(55, 119, 172, 0.9), rgba(46, 69, 96, 0.9)), url('IMG/fondo-electoral.jpg'); background-size: cover; padding: 80px 0; color: white; text-align: center;">
-        <div class="container">
-            <h2 style="font-family: 'Merriweather', serif; font-size: 2.8rem; margin-bottom: 20px;">Registros Electorales</h2>
-            <p style="font-size: 1.2rem; margin-bottom: 40px; opacity: 0.9;">Consulte el Padrón, autoridades de mesa y registros oficiales</p>
-            
-            <div style="max-width: 800px; margin: 0 auto; background: white; padding: 10px; border-radius: 50px; display: flex; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
-                <input type="text" placeholder="Ingrese DNI o nombre del trámite..." style="flex: 1; border: none; padding: 15px 25px; border-radius: 50px; outline: none; font-size: 1.1rem;">
-                <button style="background: var(--c1); color: white; border: none; padding: 0 35px; border-radius: 50px; cursor: pointer; font-weight: bold; transition: 0.3s;" onmouseover="this.style.background='#2e4560'" onmouseout="this.style.background='var(--c1)'">
-                    BUSCAR
-                </button>
-            </div>
-        </div>
-    </section>
-
-    <div class="container" style="flex: 1; padding: 60px 0;">
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px;">
-            
-            <div class="registro-card" style="text-align: center; border-left: none; border-bottom: 4px solid var(--c1); height: 100%;">
-                <div style="font-size: 3rem; margin-bottom: 15px;">🔍</div>
-                <h3>Padrón Definitivo</h3>
-                <p>Consulte su lugar de votación y mesa asignada para las próximas elecciones.</p>
-                <button class="btn-registro" style="align-self: center; margin-top: auto;">Consultar Padrón</button>
-            </div>
-
-            <div class="registro-card" style="text-align: center; border-left: none; border-bottom: 4px solid var(--c1); height: 100%;">
-                <div style="font-size: 3rem; margin-bottom: 15px;">🗳️</div>
-                <h3>Autoridades de Mesa</h3>
-                <p>Postulaciones, capacitaciones y consulta de designaciones oficiales.</p>
-                <button class="btn-registro" style="align-self: center; margin-top: auto;">Ver Información</button>
-            </div>
-
-            <div class="registro-card" style="text-align: center; border-left: none; border-bottom: 4px solid var(--c1); height: 100%;">
-                <div style="font-size: 3rem; margin-bottom: 15px;">⚖️</div>
-                <h3>Justificación de No Emisión</h3>
-                <p>Trámite para ciudadanos que no pudieron asistir a votar en los últimos comicios.</p>
-                <button class="btn-registro" style="align-self: center; margin-top: auto;">Iniciar Trámite</button>
-            </div>
-
-            <div class="registro-card" style="text-align: center; border-left: none; border-bottom: 4px solid var(--c1); height: 100%;">
-                <div style="font-size: 3rem; margin-bottom: 15px;">📝</div>
-                <h3>Registro de Afiliados</h3>
-                <p>Consulta de afiliación partidaria y renuncias a agrupaciones políticas.</p>
-                <button class="btn-registro" style="align-self: center; margin-top: auto;">Consultar</button>
-            </div>
-
-        </div>
-    </div>
-</div>
-        
-     </footer>
+    </footer>
 
     <script>
         function showPage(id) {
             document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+            document.getElementById(id).style.display = 'flex';
             document.getElementById(id).classList.add('active');
             
             document.querySelectorAll('nav button').forEach(btn => btn.classList.remove('active'));
-            event.currentTarget.classList.add('active');
+            if(event) event.currentTarget.classList.add('active');
             
             window.scrollTo(0,0);
         }
