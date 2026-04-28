@@ -35,19 +35,15 @@
         .logo-container {
             display: flex;
             align-items: center;
-            gap: 15px;
+            gap: 20px; /* Más espacio entre logo y texto */
         }
-       .logo-placeholder {
-            width: 75px; /* Tamaño aumentado */
-            height: 75px; /* Tamaño aumentado */
-            background: transparent;
-            border-radius: 50%;
-            overflow: hidden;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border: 2px solid var(--color-dorado); /* Opcional: un borde dorado para resaltarlo */
-            flex-shrink: 0; /* Evita que el logo se achique si hay poco espacio */
+      .logo-img-header {
+            width: 140px; /* Tamaño ideal para visibilidad clara */
+            height: auto; /* Mantiene la proporción original */
+            display: block;
+            object-fit: contain;
+            /* Filtro opcional para dar nitidez */
+            filter: drop-shadow(0px 2px 4px rgba(0,0,0,0.1)); 
         }
         
         .logo-placeholder img {
@@ -385,14 +381,14 @@
 
    <header>
         <div class="logo-container">
-            <div class="logo-placeholder">
-                <img src="img/logoazulsep.png" alt="Logo Secretaría Electoral">
-            </div>
+            <img src="img/logoazulsep.png" alt="Logo Secretaría Electoral Permanente" class="logo-img-header">
+            
             <div class="logo-text">
                 <h1>Secretaría Electoral Permanente</h1>
                 <p>Provincia del Chubut · Portal Oficial</p>
             </div>
         </div>
+        
         <div class="search-box">
             <input type="text" placeholder="Buscá un trámite o consulta...">
             <span>🔍</span>
