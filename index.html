@@ -364,20 +364,34 @@
 
         .social-row { display: flex; gap: 15px; }
         .social-icon {
-            width: 48px; height: 48px; background: var(--color-principal);
-            border-radius: 50%; display: flex; align-items: center; justify-content: center;
-            color: white; font-weight: bold; cursor: pointer; transition: 0.3s;
-            border: 2px solid var(--color-dorado);
-            box-shadow: 0 0 12px rgba(194, 181, 155, 0.3);
+            width: 48px;
+            height: 48px;
+            background: var(--color-principal); /* Color institucional sólido */
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.4s ease; /* Transición suave para la iluminación */
+            border: 1px solid rgba(255, 255, 255, 0.1); /* Borde casi invisible */
+            box-shadow: none; /* Eliminamos cualquier brillo previo */
         }
-        .social-icon:hover { transform: scale(1.15); background: var(--color-acento-azul); }
 
-        .footer-cols { display: flex; gap: 60px; }
-        .f-col h4 { color: var(--color-dorado); text-transform: uppercase; font-size: 14px; margin-bottom: 20px; }
-        .f-col p { font-size: 13px; margin: 8px 0; cursor: pointer; }
-        .f-col p:hover { color: white; }
-
-        .copy-line { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 25px; text-align: center; font-size: 12px; }
+        /* Efecto de iluminación tenue y moderna al pasar el mouse (Hover) */
+        .social-icon:hover {
+            transform: translateY(-5px); /* Pequeño salto hacia arriba */
+            background: var(--color-acento-azul); /* Cambio de color suave */
+            border-color: var(--color-dorado);
+            
+            /* Iluminación tenue (glow) usando el color dorado con transparencia */
+            box-shadow: 0 0 15px rgba(194, 181, 155, 0.5); 
+            
+            /* Un segundo resplandor más amplio pero más suave */
+            filter: brightness(1.1);
+        }
 
     </style>
 </head>
@@ -629,13 +643,13 @@
             <div class="footer-brand">
                 <h2>Secretaría Electoral Permanente</h2>
                 <div class="social-row">
-                    <div class="social-icon" title="Instagram">IG</div>
-                    <div class="social-icon" title="Facebook">FB</div>
-                    <div class="social-icon" title="X">X</div>
-                    <div class="social-icon" title="TikTok">TK</div>
-                    <div class="social-icon" title="WhatsApp">WA</div>
-                    <div class="social-icon" title="YouTube">YT</div>
-                </div>
+        <div class="social-icon" title="Instagram">IG</div>
+        <div class="social-icon" title="Facebook">FB</div>
+        <div class="social-icon" title="X">X</div>
+        <div class="social-icon" title="TikTok">TK</div>
+        <div class="social-icon" title="WhatsApp">WA</div>
+        <div class="social-icon" title="YouTube">YT</div>
+    </div>
             </div>
             <div class="footer-cols">
                 <div class="f-col">
