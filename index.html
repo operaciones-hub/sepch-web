@@ -392,6 +392,12 @@
             /* Un segundo resplandor más amplio pero más suave */
             filter: brightness(1.1);
         }
+        #registros {
+            min-height: 80vh; /* Ocupa el 80% de la altura de la pantalla */
+            display: flex;
+            flex-direction: column;
+            padding-bottom: 50px;
+        }
 /* Estilos para la Grilla de Registros */
         .registros-grid {
             display: grid;
@@ -732,15 +738,15 @@
         <div class="copy-line">
             &copy; 2026 Secretaría Electoral Permanente de Chubut · Provincia del Chubut · Todos los derechos reservados.
         </div>
-        <div id="registros" class="page">
-            <section class="hero-horizontal" style="min-height: auto; padding: 50px 0;">
+       <div id="registros" class="page">
+            <section class="hero-horizontal" style="min-height: auto; padding: 60px 0; background-color: var(--c3);">
                 <div class="container">
-                    <h2 style="color: var(--color-principal); font-family: 'Merriweather', serif; font-size: 2.5rem; margin-bottom: 10px;">Registros Electorales</h2>
+                    <h2 style="color: var(--c2); font-family: 'Merriweather', serif; font-size: 2.5rem; margin-bottom: 10px;">Registros Electorales</h2>
                     <p style="color: #555; max-width: 700px;">Acceda a las consultas y registros oficiales gestionados por la Secretaría Electoral Nacional y Provincial.</p>
                 </div>
             </section>
 
-            <div class="container" style="padding-bottom: 60px;">
+            <div class="container" style="flex: 1; padding-top: 40px; padding-bottom: 80px;">
                 <div class="registros-grid">
                     
                     <div class="registro-card">
