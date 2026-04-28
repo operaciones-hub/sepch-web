@@ -697,7 +697,6 @@
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
 
@@ -738,59 +737,58 @@
         <div class="copy-line">
             &copy; 2026 Secretaría Electoral Permanente de Chubut · Provincia del Chubut · Todos los derechos reservados.
         </div>
-        <div id="registros" class="page" style="display: none; flex-direction: column; min-height: 80vh;">
-    <section class="hero-horizontal" style="min-height: auto; padding: 60px 0; background-color: var(--c3);">
+        <div id="registros" class="page" style="display: none; flex-direction: column; min-height: 85vh; background-color: #f8f9fa;">
+    
+    <section style="background: linear-gradient(rgba(55, 119, 172, 0.9), rgba(46, 69, 96, 0.9)), url('IMG/fondo-electoral.jpg'); background-size: cover; padding: 80px 0; color: white; text-align: center;">
         <div class="container">
-            <h2 style="color: var(--c2); font-family: 'Merriweather', serif; font-size: 2.5rem; margin-bottom: 10px;">Registros Electorales</h2>
-            <p style="color: #555; max-width: 700px;">Acceda a las consultas y registros oficiales gestionados por la Secretaría Electoral Nacional y Provincial.</p>
+            <h2 style="font-family: 'Merriweather', serif; font-size: 2.8rem; margin-bottom: 20px;">Registros Electorales</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 40px; opacity: 0.9;">Consulte el Padrón, autoridades de mesa y registros oficiales</p>
+            
+            <div style="max-width: 800px; margin: 0 auto; background: white; padding: 10px; border-radius: 50px; display: flex; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
+                <input type="text" placeholder="Ingrese DNI o nombre del trámite..." style="flex: 1; border: none; padding: 15px 25px; border-radius: 50px; outline: none; font-size: 1.1rem;">
+                <button style="background: var(--c1); color: white; border: none; padding: 0 35px; border-radius: 50px; cursor: pointer; font-weight: bold; transition: 0.3s;" onmouseover="this.style.background='#2e4560'" onmouseout="this.style.background='var(--c1)'">
+                    BUSCAR
+                </button>
+            </div>
         </div>
     </section>
 
-    <div class="container" style="flex: 1; padding: 40px 0 80px 0;">
-        <div class="registros-grid">
-            <div class="registro-card">
-                <div>
-                    <h3><span>🔍</span> Consulta de Padrón</h3>
-                    <p>Consulte dónde vota para las próximas elecciones nacionales y provinciales.</p>
-                </div>
-                <button class="btn-registro">Consultar Padrón</button>
+    <div class="container" style="flex: 1; padding: 60px 0;">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px;">
+            
+            <div class="registro-card" style="text-align: center; border-left: none; border-bottom: 4px solid var(--c1); height: 100%;">
+                <div style="font-size: 3rem; margin-bottom: 15px;">🔍</div>
+                <h3>Padrón Definitivo</h3>
+                <p>Consulte su lugar de votación y mesa asignada para las próximas elecciones.</p>
+                <button class="btn-registro" style="align-self: center; margin-top: auto;">Consultar Padrón</button>
             </div>
 
-            <div class="registro-card">
-                <div>
-                    <h3><span>⚖️</span> Registro de Infractores</h3>
-                    <p>Consulte su estado en el Registro de Infractores o pague multas pendientes.</p>
-                </div>
-                <button class="btn-registro">Ver situación</button>
+            <div class="registro-card" style="text-align: center; border-left: none; border-bottom: 4px solid var(--c1); height: 100%;">
+                <div style="font-size: 3rem; margin-bottom: 15px;">🗳️</div>
+                <h3>Autoridades de Mesa</h3>
+                <p>Postulaciones, capacitaciones y consulta de designaciones oficiales.</p>
+                <button class="btn-registro" style="align-self: center; margin-top: auto;">Ver Información</button>
             </div>
 
-            <div class="registro-card">
-                <div>
-                    <h3><span>🗳️</span> Autoridades de Mesa</h3>
-                    <p>Inscripción al Registro de Postulantes y capacitaciones para designados.</p>
-                </div>
-                <button class="btn-registro">Postularse / Consultar</button>
+            <div class="registro-card" style="text-align: center; border-left: none; border-bottom: 4px solid var(--c1); height: 100%;">
+                <div style="font-size: 3rem; margin-bottom: 15px;">⚖️</div>
+                <h3>Justificación de No Emisión</h3>
+                <p>Trámite para ciudadanos que no pudieron asistir a votar en los últimos comicios.</p>
+                <button class="btn-registro" style="align-self: center; margin-top: auto;">Iniciar Trámite</button>
             </div>
 
-            <div class="registro-card">
-                <div>
-                    <h3><span>📝</span> Registro de Afiliados</h3>
-                    <p>Verifique su estado de afiliación partidaria o realice el trámite de renuncia.</p>
-                </div>
-                <button class="btn-registro">Consultar Afiliación</button>
+            <div class="registro-card" style="text-align: center; border-left: none; border-bottom: 4px solid var(--c1); height: 100%;">
+                <div style="font-size: 3rem; margin-bottom: 15px;">📝</div>
+                <h3>Registro de Afiliados</h3>
+                <p>Consulta de afiliación partidaria y renuncias a agrupaciones políticas.</p>
+                <button class="btn-registro" style="align-self: center; margin-top: auto;">Consultar</button>
             </div>
 
-            <div class="registro-card">
-                <div>
-                    <h3><span>👥</span> Delegados Judiciales</h3>
-                    <p>Información y registro para ciudadanos que actúan como nexo judicial.</p>
-                </div>
-                <button class="btn-registro">Acceder al registro</button>
-            </div>
         </div>
     </div>
-</div> ```
-    </footer>
+</div>
+    <footer style="width: 100%; margin-top: auto;">
+        </footer>
 
     <script>
         function showPage(id) {
