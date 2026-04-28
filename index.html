@@ -392,7 +392,64 @@
             /* Un segundo resplandor más amplio pero más suave */
             filter: brightness(1.1);
         }
+/* Estilos para la Grilla de Registros */
+        .registros-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
 
+        .registro-card {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            border-left: 5px solid var(--color-principal);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .registro-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            border-left-color: var(--color-dorado);
+        }
+
+        .registro-card h3 {
+            color: var(--color-principal);
+            margin-top: 0;
+            font-size: 1.3rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .registro-card p {
+            color: #666;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        .btn-registro {
+            align-self: flex-start;
+            background: none;
+            border: 1px solid var(--color-principal);
+            color: var(--color-principal);
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 15px;
+            transition: all 0.3s;
+        }
+
+        .btn-registro:hover {
+            background: var(--color-principal);
+            color: white;
+        }
     </style>
 </head>
 <body>
@@ -674,6 +731,60 @@
         </div>
         <div class="copy-line">
             &copy; 2026 Secretaría Electoral Permanente de Chubut · Provincia del Chubut · Todos los derechos reservados.
+        </div>
+        <div id="registros" class="page">
+            <section class="hero-horizontal" style="min-height: auto; padding: 50px 0;">
+                <div class="container">
+                    <h2 style="color: var(--color-principal); font-family: 'Merriweather', serif; font-size: 2.5rem; margin-bottom: 10px;">Registros Electorales</h2>
+                    <p style="color: #555; max-width: 700px;">Acceda a las consultas y registros oficiales gestionados por la Secretaría Electoral Nacional y Provincial.</p>
+                </div>
+            </section>
+
+            <div class="container" style="padding-bottom: 60px;">
+                <div class="registros-grid">
+                    
+                    <div class="registro-card">
+                        <div>
+                            <h3><span>🔍</span> Consulta de Padrón</h3>
+                            <p>Consulte dónde vota para las próximas elecciones nacionales y provinciales. Verifique sus datos registrales.</p>
+                        </div>
+                        <button class="btn-registro">Consultar Padrón</button>
+                    </div>
+
+                    <div class="registro-card">
+                        <div>
+                            <h3><span>⚖️</span> Registro de Infractores</h3>
+                            <p>Consulte su estado en el Registro de Infractores al deber de votar. Solicite justificación o pague multas pendientes.</p>
+                        </div>
+                        <button class="btn-registro">Ver situación</button>
+                    </div>
+
+                    <div class="registro-card">
+                        <div>
+                            <h3><span>🗳️</span> Autoridades de Mesa</h3>
+                            <p>Inscripción al Registro de Postulantes a Autoridades de Mesa. Capacitaciones y consultas para ciudadanos designados.</p>
+                        </div>
+                        <button class="btn-registro">Postularse / Consultar</button>
+                    </div>
+
+                    <div class="registro-card">
+                        <div>
+                            <h3><span>📝</span> Registro de Afiliados</h3>
+                            <p>Verifique su estado de afiliación partidaria o realice el trámite de renuncia a través del portal oficial.</p>
+                        </div>
+                        <button class="btn-registro">Consultar Afiliación</button>
+                    </div>
+
+                    <div class="registro-card">
+                        <div>
+                            <h3><span>👥</span> Delegados Judiciales</h3>
+                            <p>Información y registro para ciudadanos que actúan como nexo entre la Justicia y los establecimientos de votación.</p>
+                        </div>
+                        <button class="btn-registro">Acceder al registro</button>
+                    </div>
+
+                </div>
+            </div>
         </div>
     </footer>
 
