@@ -456,6 +456,63 @@
             background: var(--color-principal);
             color: white;
         }
+        /* --- ESTILOS CRONOGRAMA (PROCESOS ELECTORALES) --- */
+        .timeline {
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 0;
+        }
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 4px;
+            background-color: var(--color-secundario-azul);
+            top: 0; bottom: 0; left: 50%;
+            margin-left: -2px;
+        }
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            width: 50%;
+        }
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 20px; height: 20px;
+            right: -10px;
+            background-color: white;
+            border: 4px solid var(--color-dorado);
+            top: 15px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+        .left { left: 0; text-align: right; }
+        .right { left: 50%; }
+        .right::after { left: -10px; }
+        .timeline-content {
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border-top: 3px solid var(--color-principal);
+        }
+        .date-badge {
+            display: inline-block;
+            background: var(--color-oscuro);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 11px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+        @media (max-width: 768px) {
+            .timeline::after { left: 31px; }
+            .timeline-item { width: 100%; padding-left: 70px; padding-right: 25px; text-align: left; }
+            .timeline-item::after { left: 21px; }
+            .right { left: 0%; }
+        }
     </style>
 </head>
 <body>
@@ -715,6 +772,52 @@
                         BUSCAR
                     </button>
                 </div>
+                <div id="procesos" class="page">
+        <section style="background: linear-gradient(rgba(15, 26, 48, 0.8), rgba(15, 26, 48, 0.8)), url('https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&w=1600&q=80') center/cover; padding: 80px 0; color: white; text-align: center;">
+            <div class="container" style="padding: 0;">
+                <h2 style="font-family: 'Merriweather', serif; font-size: 2.8rem; margin-bottom: 15px;">Procesos Electorales</h2>
+                <p style="font-size: 1.1rem; opacity: 0.9;">Cronograma y etapas clave del Calendario Electoral vigente.</p>
+            </div>
+        </section>
+
+        <div class="container" style="flex: 1;">
+            <div class="timeline">
+                
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <span class="date-badge">15 de Marzo</span>
+                        <h3>Cierre de Padrón Provisorio</h3>
+                        <p>Fecha límite para novedades registrales y reclamos de datos personales en el padrón.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <span class="date-badge">10 de Abril</span>
+                        <h3>Reconocimiento de Alianzas</h3>
+                        <p>Fin del plazo para solicitar la concertación de frentes y alianzas electorales entre partidos.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <span class="date-badge">05 de Mayo</span>
+                        <h3>Presentación de Listas</h3>
+                        <p>Oficialización de precandidatos y listas ante las juntas electorales partidarias.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <span class="date-badge">15 de Junio</span>
+                        <h3>Inicio de Campaña</h3>
+                        <p>Comienzo del periodo para la difusión de propaganda política en medios audiovisuales.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
             </div>
         </section>
 
@@ -786,15 +889,16 @@
 
     <script>
         function showPage(id) {
-            document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-            document.getElementById(id).style.display = 'flex';
-            document.getElementById(id).classList.add('active');
+            document.querySelectorAll('.page').forEach(p => {
+                p.classList.remove('active');
+                p.style.display = 'none'; // Asegura que no ocupen espacio
+            });
+            const target = document.getElementById(id);
+            target.style.display = 'flex';
+            target.classList.add('active');
             
             document.querySelectorAll('nav button').forEach(btn => btn.classList.remove('active'));
             if(event) event.currentTarget.classList.add('active');
             
             window.scrollTo(0,0);
         }
-    </script>
-</body>
-</html>
