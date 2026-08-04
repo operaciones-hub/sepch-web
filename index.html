@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -105,9 +106,9 @@
         /* HERO INSTITUCIONAL Y SECCIONES */
         .hero-horizontal {
             position: relative;
-            height: 350px;
-            background: linear-gradient(rgba(15, 26, 48, 0.6), rgba(15, 26, 48, 0.6)), 
-                        url('https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=1600&q=80') center/cover;
+            height: 400px;
+            background: linear-gradient(rgba(15, 26, 48, 0.4), rgba(15, 26, 48, 0.4)), 
+                        url('img/fondo-inicio.png') center/cover no-repeat;
             display: flex; align-items: center; justify-content: center;
         }
         .welcome-overlay {
@@ -271,6 +272,7 @@
         <button onclick="showPage('contacto')">Contacto</button>
     </nav>
 
+    <!-- 1. PÁGINA INICIO -->
     <div id="inicio" class="page active">
         <section class="hero-horizontal">
             <div class="welcome-overlay">
@@ -312,6 +314,7 @@
         </div>
     </div>
 
+    <!-- 2. PÁGINA INSTITUCIONAL -->
     <div id="institucional" class="page">
         <section class="hero-horizontal" style="background: var(--color-oscuro);">
             <div class="welcome-overlay" style="background: rgba(255,255,255,0.05); color: white; border-left-color: var(--color-dorado); box-shadow: none; text-align: left;">
@@ -336,7 +339,7 @@
                 </div>
                 <div>
                     <div class="highlight-card"><div class="highlight-title">Mandato</div><p style="font-size: 13px; color:#555;">6 años con posibilidad de una sola reelección. Busca equilibrar la estabilidad institucional con la renovación democrática.</p></div>
-                    <div class="highlight-card dorado"><div class="highlight-title">Autonomía</div><p style="font-size: 13px; color:#555;">Autonomía presupuestaria dentro del Poder Legislativo, garantizando independencia operativa and técnica.</p></div>
+                    <div class="highlight-card dorado"><div class="highlight-title">Autonomía</div><p style="font-size: 13px; color:#555;">Autonomía presupuestaria dentro del Poder Legislativo, garantizando independencia operativa y técnica.</p></div>
                     <div class="highlight-card"><div class="highlight-title">Sede Central</div><p style="font-size: 13px; color:#555;">Rawson, Chubut. Funciona en la Legislatura Provincial con atención de lunes a viernes.</p></div>
                 </div>
             </div>
@@ -375,6 +378,7 @@
         </div>
     </div>
 
+    <!-- 3. PÁGINA REGISTROS ELECTORALES -->
     <div id="registros" class="page">
         <section class="tram-hero">
             <div style="font-size: 11px; font-weight: bold; color: #86efac; text-transform: uppercase; letter-spacing: 1.2px; margin-bottom: 8px;">Atención al Ciudadano</div>
@@ -462,6 +466,7 @@
         </section>
     </div>
 
+    <!-- 4. PÁGINA PROCESOS ELECTORALES -->
     <div id="procesos" class="page">
         <section style="background: var(--color-principal); padding: 50px 8%; color: white; text-align: center;">
             <h2 style="font-family: 'Merriweather', Georgia, serif; font-size: 30px; font-weight: 700; margin-bottom: 10px;">Procesos Electorales</h2>
@@ -476,6 +481,7 @@
         </div>
     </div>
 
+    <!-- 5. PÁGINA PARTIDOS POLÍTICOS -->
     <div id="partidos" class="page">
         <section style="background: var(--color-principal); color: white; padding: 50px 8%;">
             <h2>Partidos Políticos y SIREPPAR</h2>
@@ -489,6 +495,7 @@
         </div>
     </div>
 
+    <!-- 6. PÁGINA PARTICIPACIÓN -->
     <div id="participacion" class="page">
         <section style="background: var(--color-principal); color: white; padding: 50px 8%; text-align: center;">
             <h2 style="font-family: 'Merriweather', Georgia, serif; font-size: 30px; font-weight: 700; margin-bottom: 10px;">Participación Ciudadana</h2>
@@ -510,6 +517,7 @@
         </div>
     </div>
 
+    <!-- 7. PÁGINA LEGISLACIÓN ELECTORAL -->
     <div id="legislacion" class="page">
         <section style="background: var(--color-principal); color: white; padding: 50px 8%;">
             <h2>Legislación Electoral de Chubut</h2>
@@ -523,6 +531,7 @@
         </div>
     </div>
 
+    <!-- 8. PÁGINA COMUNICACIÓN -->
     <div id="comunicacion" class="page">
         <section style="background: var(--color-principal); color: white; padding: 50px 8%; text-align: center;">
             <h2 style="font-family: 'Merriweather', Georgia, serif; font-size: 30px; font-weight: 700; margin-bottom: 10px;">Sala de Comunicación</h2>
@@ -538,6 +547,7 @@
         </div>
     </div>
 
+    <!-- 9. PÁGINA CONCURSOS -->
     <div id="concursos" class="page">
         <section style="background: var(--color-principal); color: white; padding: 50px 8%;">
             <h2>Concursos y Convocatorias</h2>
@@ -552,6 +562,7 @@
         </div>
     </div>
 
+    <!-- 10. PÁGINA CONTACTO -->
     <div id="contacto" class="page">
         <section style="background: var(--color-oscuro); color: white; padding: 50px 8%;">
             <h2>Delegaciones y Contacto Oficial</h2>
@@ -579,6 +590,7 @@
         </div>
     </div>
 
+    <!-- FOOTER GLOBAL -->
     <footer>
         <div class="footer-main">
             <div class="footer-brand">
@@ -635,3 +647,5 @@
     </script>
 </body>
 </html>
+
+```
