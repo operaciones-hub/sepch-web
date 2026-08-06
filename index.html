@@ -105,9 +105,9 @@
         /* HERO INSTITUCIONAL Y SECCIONES */
         .hero-horizontal {
             position: relative;
-            height: 350px;
-            background: linear-gradient(rgba(15, 26, 48, 0.6), rgba(15, 26, 48, 0.6)), 
-                        url('img/fondo-inicio.png.png') center/cover;
+            height: 400px;
+            background: linear-gradient(rgba(15, 26, 48, 0.4), rgba(15, 26, 48, 0.4)), 
+                        url('img/fondo-inicio.png') center/cover no-repeat;
             display: flex; align-items: center; justify-content: center;
         }
         .welcome-overlay {
@@ -176,7 +176,7 @@
         .secretario-tags { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 15px; }
         .secretario-tag { background: #f4f7f9; color: var(--color-principal); font-size: 11px; font-weight: 700; padding: 5px 12px; border-radius: 12px; border: 1px solid #e7ebef; }
 
-        /* COMPONENTES TRÁMITES */
+        /* COMPONENTES TRÁMITES Y BOLETAS */
         .tram-hero { background: #1a6d43; padding: 50px 8%; color: white; text-align: center; }
         .ph-tags { display: flex; gap: 8px; margin-top: 18px; flex-wrap: wrap; justify-content: center; }
         .ph-tag { background: rgba(255, 255, 255, 0.1); color: white; font-size: 11px; padding: 4px 12px; border-radius: 20px; border: 1px solid rgba(255, 255, 255, 0.2); }
@@ -200,6 +200,77 @@
         .form-t { font-size: 14px; font-weight: bold; color: var(--color-oscuro); margin-bottom: 5px; }
         .form-d { font-size: 12px; color: #666; margin-bottom: 12px; line-height: 1.4; }
         .form-dl { font-size: 12px; color: var(--color-principal); font-weight: bold; text-decoration: none; }
+
+        /* ESTILOS ESPECÍFICOS PROCESOS ELECTORALES Y BARRA GRIS */
+        .header-procesos {
+            background: var(--color-oscuro);
+            color: white;
+            padding: 50px 8%;
+            text-align: center;
+        }
+        .header-procesos h2 {
+            font-family: 'Merriweather', Georgia, serif;
+            font-size: 34px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: white;
+        }
+        .header-procesos p {
+            font-size: 15px;
+            line-height: 1.7;
+            max-width: 900px;
+            margin: 0 auto;
+            color: rgba(255, 255, 255, 0.85);
+        }
+        .barra-fondo-gris {
+            background-color: #e7ebef;
+            padding: 40px 8%;
+            border-bottom: 1px solid #d0d7de;
+        }
+        .boletas-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 25px;
+        }
+        .boleta-card {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            border-left: 5px solid var(--color-principal);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.2s;
+        }
+        .boleta-card:hover {
+            transform: translateY(-3px);
+            border-left-color: var(--color-dorado);
+        }
+        .boleta-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 15px;
+        }
+        .boleta-icon {
+            font-size: 28px;
+            background: #f0f4f8;
+            width: 50px;
+            height: 50px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        .boleta-title {
+            font-size: 15px;
+            font-weight: 700;
+            color: var(--color-oscuro);
+            line-height: 1.3;
+        }
 
         /* TIMELINE (PROCESOS) */
         .timeline { position: relative; max-width: 900px; margin: 0 auto; padding: 40px 0; }
@@ -271,6 +342,7 @@
         <button onclick="showPage('contacto')">Contacto</button>
     </nav>
 
+    <!-- 1. PÁGINA INICIO -->
     <div id="inicio" class="page active">
         <section class="hero-horizontal">
             <div class="welcome-overlay">
@@ -312,6 +384,7 @@
         </div>
     </div>
 
+    <!-- 2. PÁGINA INSTITUCIONAL -->
     <div id="institucional" class="page">
         <section class="hero-horizontal" style="background: var(--color-oscuro);">
             <div class="welcome-overlay" style="background: rgba(255,255,255,0.05); color: white; border-left-color: var(--color-dorado); box-shadow: none; text-align: left;">
@@ -336,7 +409,7 @@
                 </div>
                 <div>
                     <div class="highlight-card"><div class="highlight-title">Mandato</div><p style="font-size: 13px; color:#555;">6 años con posibilidad de una sola reelección. Busca equilibrar la estabilidad institucional con la renovación democrática.</p></div>
-                    <div class="highlight-card dorado"><div class="highlight-title">Autonomía</div><p style="font-size: 13px; color:#555;">Autonomía presupuestaria dentro del Poder Legislativo, garantizando independencia operativa and técnica.</p></div>
+                    <div class="highlight-card dorado"><div class="highlight-title">Autonomía</div><p style="font-size: 13px; color:#555;">Autonomía presupuestaria dentro del Poder Legislativo, garantizando independencia operativa y técnica.</p></div>
                     <div class="highlight-card"><div class="highlight-title">Sede Central</div><p style="font-size: 13px; color:#555;">Rawson, Chubut. Funciona en la Legislatura Provincial con atención de lunes a viernes.</p></div>
                 </div>
             </div>
@@ -375,6 +448,7 @@
         </div>
     </div>
 
+    <!-- 3. PÁGINA REGISTROS ELECTORALES -->
     <div id="registros" class="page">
         <section class="tram-hero">
             <div style="font-size: 11px; font-weight: bold; color: #86efac; text-transform: uppercase; letter-spacing: 1.2px; margin-bottom: 8px;">Atención al Ciudadano</div>
@@ -462,12 +536,87 @@
         </section>
     </div>
 
+    <!-- 4. PÁGINA PROCESOS ELECTORALES (REDISEÑADA SEGÚN REQUERIMIENTOS) -->
     <div id="procesos" class="page">
-        <section style="background: var(--color-principal); padding: 50px 8%; color: white; text-align: center;">
-            <h2 style="font-family: 'Merriweather', Georgia, serif; font-size: 30px; font-weight: 700; margin-bottom: 10px;">Procesos Electorales</h2>
-            <p style="color: rgba(255,255,255,0.9); font-size: 15px;">Cronograma oficial y etapas clave del Calendario vigente de la provincia.</p>
+        <!-- HEADER PÁGINA PROCESOS ELECTORALES -->
+        <section class="header-procesos">
+            <h2>Procesos Electorales</h2>
+            <p>Se pone a disposición documentación, decretos, normativas y material de consulta relacionados con la organización y desarrollo de los procesos electorales. El objetivo es brindar información clara y accessible que permita comprender el marco legal y administrativo que rige cada elección.</p>
         </section>
+
+        <!-- SECCIÓN DE FONDO GRIS Y BOLETAS ÚNICAS -->
+        <section class="barra-fondo-gris">
+            <div style="max-width: 1200px; margin: 0 auto;">
+                <h3 class="section-title" style="border-left-color: var(--color-principal); margin-bottom: 10px;">Boletas Únicas</h3>
+                <p style="color: #666; font-size: 14px; margin-bottom: 20px;">Modelos oficiales de Boletas Únicas de Papel disponibles para consulta pública.</p>
+                
+                <div class="boletas-grid">
+                    <!-- Boleta 1 -->
+                    <div class="boleta-card">
+                        <div>
+                            <div class="boleta-header">
+                                <div class="boleta-icon">🗳️</div>
+                                <div class="boleta-title">Diputados Nacionales</div>
+                            </div>
+                            <p style="font-size: 13px; color: #666; margin-bottom: 15px;">Modelo oficial BUP asignado para la categoría de Diputados Nacionales.</p>
+                        </div>
+                        <button class="tram-btn">Ver Boleta Única 📄</button>
+                    </div>
+
+                    <!-- Boleta 2 -->
+                    <div class="boleta-card">
+                        <div>
+                            <div class="boleta-header">
+                                <div class="boleta-icon">📄</div>
+                                <div class="boleta-title">Referéndum Provincial</div>
+                            </div>
+                            <p style="font-size: 13px; color: #666; margin-bottom: 15px;">BUP para la consulta popular y referéndum de alcance provincial.</p>
+                        </div>
+                        <button class="tram-btn">Ver Boleta Única 📄</button>
+                    </div>
+
+                    <!-- Boleta 3 -->
+                    <div class="boleta-card">
+                        <div>
+                            <div class="boleta-header">
+                                <div class="boleta-icon">🗳️</div>
+                                <div class="boleta-title">Consejo de la Magistratura - Esquel</div>
+                            </div>
+                            <p style="font-size: 13px; color: #666; margin-bottom: 15px;">Modelo de BUP para elección de consejeros en la Circunscripción Esquel.</p>
+                        </div>
+                        <button class="tram-btn">Ver Boleta Única 📄</button>
+                    </div>
+
+                    <!-- Boleta 4 -->
+                    <div class="boleta-card">
+                        <div>
+                            <div class="boleta-header">
+                                <div class="boleta-icon">🗳️</div>
+                                <div class="boleta-title">Consejo de la Magistratura - Trelew</div>
+                            </div>
+                            <p style="font-size: 13px; color: #666; margin-bottom: 15px;">Modelo de BUP para elección de consejeros en la Circunscripción Trelew.</p>
+                        </div>
+                        <button class="tram-btn">Ver Boleta Única 📄</button>
+                    </div>
+
+                    <!-- Boleta 5 -->
+                    <div class="boleta-card">
+                        <div>
+                            <div class="boleta-header">
+                                <div class="boleta-icon">📄</div>
+                                <div class="boleta-title">Referéndum Municipal Puerto Madryn</div>
+                            </div>
+                            <p style="font-size: 13px; color: #666; margin-bottom: 15px;">Modelo oficial BUP asignado a la consulta municipal de Puerto Madryn.</p>
+                        </div>
+                        <button class="tram-btn">Ver Boleta Única 📄</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CRONOGRAMA ELECTORAL -->
         <div class="container">
+            <h3 class="section-title">Cronograma del Proceso Electoral</h3>
             <div class="timeline">
                 <div class="timeline-item left"><div class="timeline-content"><span class="date-badge">15 de Marzo</span><h3>Cierre de Padrón Provisorio</h3><p>Fecha límite para novedades registrales y reclamos.</p></div></div>
                 <div class="timeline-item right"><div class="timeline-content"><span class="date-badge">10 de Abril</span><h3>Reconocimiento de Alianzas</h3><p>Fin del plazo legal para concertar frentes electorales.</p></div></div>
@@ -476,6 +625,7 @@
         </div>
     </div>
 
+    <!-- 5. PÁGINA PARTIDOS POLÍTICOS -->
     <div id="partidos" class="page">
         <section style="background: var(--color-principal); color: white; padding: 50px 8%;">
             <h2>Partidos Políticos y SIREPPAR</h2>
@@ -489,6 +639,7 @@
         </div>
     </div>
 
+    <!-- 6. PÁGINA PARTICIPACIÓN -->
     <div id="participacion" class="page">
         <section style="background: var(--color-principal); color: white; padding: 50px 8%; text-align: center;">
             <h2 style="font-family: 'Merriweather', Georgia, serif; font-size: 30px; font-weight: 700; margin-bottom: 10px;">Participación Ciudadana</h2>
@@ -510,6 +661,7 @@
         </div>
     </div>
 
+    <!-- 7. PÁGINA LEGISLACIÓN ELECTORAL -->
     <div id="legislacion" class="page">
         <section style="background: var(--color-principal); color: white; padding: 50px 8%;">
             <h2>Legislación Electoral de Chubut</h2>
@@ -523,6 +675,7 @@
         </div>
     </div>
 
+    <!-- 8. PÁGINA COMUNICACIÓN -->
     <div id="comunicacion" class="page">
         <section style="background: var(--color-principal); color: white; padding: 50px 8%; text-align: center;">
             <h2 style="font-family: 'Merriweather', Georgia, serif; font-size: 30px; font-weight: 700; margin-bottom: 10px;">Sala de Comunicación</h2>
@@ -538,6 +691,7 @@
         </div>
     </div>
 
+    <!-- 9. PÁGINA CONCURSOS -->
     <div id="concursos" class="page">
         <section style="background: var(--color-principal); color: white; padding: 50px 8%;">
             <h2>Concursos y Convocatorias</h2>
@@ -552,6 +706,7 @@
         </div>
     </div>
 
+    <!-- 10. PÁGINA CONTACTO -->
     <div id="contacto" class="page">
         <section style="background: var(--color-oscuro); color: white; padding: 50px 8%;">
             <h2>Delegaciones y Contacto Oficial</h2>
@@ -579,6 +734,7 @@
         </div>
     </div>
 
+    <!-- FOOTER GLOBAL -->
     <footer>
         <div class="footer-main">
             <div class="footer-brand">
@@ -603,7 +759,7 @@
                     <h4>Información</h4>
                     <p onclick="showPage('institucional')">Normativa Vigente</p>
                     <p onclick="showPage('institucional')">Resoluciones</p>
-                    <p onclick="showPage('capacitacion')">Gacetillas</p>
+                    <p onclick="showPage('comunicacion')">Gacetillas</p>
                 </div>
             </div>
         </div>
