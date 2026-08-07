@@ -537,257 +537,309 @@
     </div>
 
     <!-- 4. PÁGINA PROCESOS ELECTORALES -->
-    <div id="procesos" class="page">
-        <!-- HEADER PÁGINA PROCESOS ELECTORALES -->
-        <section class="header-procesos">
-            <h2>Procesos Electorales</h2>
-            <p>Se pone a disposición documentación, decretos, normativas y material de consulta relacionados con la organización y desarrollo de los procesos electorales. El objetivo es brindar información clara y accesible que permita comprender el marco legal y administrativo que rige cada elección.</p>
-        </section>
+  .processes-section {
+            background-color: #718da6;
+            color: #fff;
+            padding: 80px 50px;
+            text-align: center;
+        }
 
-        <!-- SECCIÓN DE FONDO GRIS Y BOLETAS ÚNICAS DE PAPEL -->
-        <section class="barra-fondo-gris">
-            <div style="max-width: 1200px; margin: 0 auto;">
-                <h3 class="section-title" style="border-left-color: var(--color-principal); margin-bottom: 10px;">Boletas Únicas</h3>
-                <p style="color: #666; font-size: 14px; margin-bottom: 20px;">Modelos oficiales de Boletas Únicas de Papel disponibles para consulta pública.</p>
-                
-                <div class="boletas-grid">
-                    <!-- Boleta 1 -->
-                    <div class="boleta-card">
-                        <div>
-                            <div class="boleta-header">
-                                <div class="boleta-icon">🗳️</div>
-                                <div class="boleta-title">Diputados Nacionales</div>
+        .processes-section h2 {
+            font-size: 48px;
+            margin: 0 0 10px;
+        }
+
+        .processes-section .subtitle-top {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        .processes-section .description-block {
+            max-width: 900px;
+            margin: 0 auto 50px;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        /* BUP Section Styles */
+        .bup-section {
+            background-color: #fff;
+            color: #333;
+            padding: 50px;
+            max-width: 1200px;
+            margin: -40px auto 50px auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .bup-section h3 {
+            font-size: 24px;
+            color: #333;
+            margin-top: 0;
+            margin-bottom: 40px;
+            text-align: left;
+        }
+
+        .bup-grid {
+            display: flex;
+            gap: 20px;
+            justify-content: space-around;
+        }
+
+        .bup-card-panel {
+            background-color: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid #e0e0e0;
+            display: flex;
+            width: calc(100% / 2 - 10px);
+        }
+
+        .bup-card-left {
+            padding: 20px;
+            border-right: 1px solid #e0e0e0;
+            flex-grow: 1;
+        }
+
+        .bup-card-right {
+            padding: 20px;
+            background-color: #fafafa;
+            flex-grow: 1;
+        }
+
+        .clipboard-container {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            background-color: #fcfcfc;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .bup-field-row {
+            border: 1px solid #ddd;
+            padding: 10px;
+            background-color: #fff;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .bup-field-label {
+            font-size: 10px;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: #555;
+            background-color: #f1f1f1;
+            padding: 4px 8px;
+            border-radius: 3px;
+        }
+
+        .bup-field-value {
+            font-size: 12px;
+            color: #333;
+        }
+
+        .clipboard-logo-area {
+            border: 1px solid #ddd;
+            height: 100px;
+            margin-top: 10px;
+            background-color: #fdfdfd;
+        }
+
+        .card-details-title {
+            font-size: 12px;
+            font-weight: bold;
+            color: #536c84;
+            margin-top: 0;
+            margin-bottom: 8px;
+        }
+
+        .card-details-text {
+            font-size: 12px;
+            color: #666;
+            margin: 0;
+            line-height: 1.4;
+        }
+
+        .bup-main-title {
+            font-size: 16px;
+            font-weight: bold;
+            margin-top: 15px;
+            color: #333;
+        }
+
+        .bup-subtitle {
+            font-size: 12px;
+            color: #666;
+            margin: 0;
+        }
+
+        /* Footer Styles */
+        .main-footer {
+            background-color: #e6e6e6;
+            color: #666;
+            padding: 20px 50px;
+            font-size: 14px;
+            border-top: 1px solid #d0d0d0;
+        }
+
+        .main-footer ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 20px;
+            justify-content: flex-end;
+            margin-bottom: 10px;
+        }
+
+        .main-footer li a {
+            text-decoration: none;
+            color: #666;
+        }
+
+        .footer-copyright {
+            margin: 0;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 15px;
+            justify-content: flex-end;
+        }
+
+        .footer-social img {
+            height: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="main-header">
+        <div class="header-left">
+            <img src="https://via.placeholder.com/60" alt="Logo SEP - Chubut"> <!-- Reemplazar con logo real -->
+            <div class="sep-text">
+                <h1>Secretaría Electoral Permanente</h1>
+                <p>Provincia del Chubut · Portal Oficial</p>
+            </div>
+        </div>
+        <div class="header-right">
+            <div class="search-container">
+                <input type="text" placeholder="Buscá un trámite o consulta...">
+                <span>🔍</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Nav -->
+    <nav class="main-nav">
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Institucional</a></li>
+            <li><a href="#">Registros Electorales</a></li>
+            <li><a href="#" class="active">Procesos Electorales</a></li>
+            <li><a href="#">Partidos Políticos</a></li>
+            <li><a href="#">Capacitación</a></li>
+            <li><a href="#">Legislación Electoral</a></li>
+            <li><a href="#">Comunicación</a></li>
+            <li><a href="#">Concursos</a></li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <!-- Processes Content Section -->
+    <section class="processes-section">
+        <h2>Procesos Electorales</h2>
+        <p class="subtitle-top">Cronograma oficial y etapas clave del Calendario vigente de la provincia.</p>
+        <p class="description-block">
+            Se pone a disposición documentación, decretos, normativas y material de consulta relacionados con la organización y desarrollo de los procesos electorales. El objetivo es brindar información clara y accesible que permita comprender el marco legal y administrativo que rige cada elección.
+        </p>
+
+        <!-- Section: Boletas Únicas -->
+        <div class="bup-section">
+            <h3>Boletas Únicas</h3>
+            
+            <div class="bup-grid">
+                <!-- BUP Card 1 -->
+                <div class="bup-card-panel">
+                    <div class="bup-card-left">
+                        <div class="clipboard-container">
+                            <div class="bup-field-row">
+                                <span class="bup-field-label">GOBERNADOR</span>
+                                <span class="bup-field-value">[Nombre Candidato]</span>
                             </div>
-                            <p style="font-size: 13px; color: #666; margin-bottom: 15px;">Modelo oficial BUP asignado para la categoría de Diputados Nacionales.</p>
-                        </div>
-                        <button class="tram-btn">Ver Boleta Única 📄</button>
-                    </div>
-
-                    <!-- Boleta 2 -->
-                    <div class="boleta-card">
-                        <div>
-                            <div class="boleta-header">
-                                <div class="boleta-icon">📄</div>
-                                <div class="boleta-title">Referéndum Provincial</div>
+                            <div class="bup-field-row">
+                                <span class="bup-field-label">DIPUTADOS</span>
+                                <span class="bup-field-value">[Lista]</span>
                             </div>
-                            <p style="font-size: 13px; color: #666; margin-bottom: 15px;">BUP para la consulta popular y referéndum de alcance provincial.</p>
                         </div>
-                        <button class="tram-btn">Ver Boleta Única 📄</button>
+                        <p class="bup-main-title">Boleta Única Provincial</p>
+                        <p class="bup-subtitle">Elecciones Generales [Año]</p>
                     </div>
+                    <div class="bup-card-right">
+                        <p class="card-details-title">EJEMPLO DE DISEÑO</p>
+                        <p class="card-details-text">Este modelo ilustra la estructura de la Boleta Única de Papel (BUP) para las elecciones provinciales de Chubut.</p>
+                        
+                        <p class="card-details-title">CARACTERÍSTICAS</p>
+                        <p class="card-details-text">Permite al elector visualizar todas las opciones y votar por lista completa o por categorías.</p>
+                        
+                        <p class="card-details-title">FORMATO BUP</p>
+                        <p class="card-details-text">Diseño oficial con secciones para cargos ejecutivos y legislativos.</p>
+                    </div>
+                </div>
 
-                    <!-- Boleta 3 -->
-                    <div class="boleta-card">
-                        <div>
-                            <div class="boleta-header">
-                                <div class="boleta-icon">🗳️</div>
-                                <div class="boleta-title">Consejo de la Magistratura Circunscripción Esquel</div>
+                <!-- BUP Card 2 -->
+                <div class="bup-card-panel">
+                    <div class="bup-card-left">
+                        <div class="clipboard-container">
+                            <div class="bup-field-row">
+                                <span class="bup-field-label">INTENDENTE</span>
+                                <span class="bup-field-value">[Nombre Candidato]</span>
                             </div>
-                            <p style="font-size: 13px; color: #666; margin-bottom: 15px;">Modelo de BUP para elección de consejeros en la Circunscripción Esquel.</p>
-                        </div>
-                        <button class="tram-btn">Ver Boleta Única 📄</button>
-                    </div>
-
-                    <!-- Boleta 4 -->
-                    <div class="boleta-card">
-                        <div>
-                            <div class="boleta-header">
-                                <div class="boleta-icon">🗳️</div>
-                                <div class="boleta-title">Consejo de la Magistratura Circunscripción Trelew</div>
+                            <div class="bup-field-row">
+                                <span class="bup-field-label">CONCEJALES</span>
+                                <span class="bup-field-value">[Lista]</span>
                             </div>
-                            <p style="font-size: 13px; color: #666; margin-bottom: 15px;">Modelo de BUP para elección de consejeros en la Circunscripción Trelew.</p>
                         </div>
-                        <button class="tram-btn">Ver Boleta Única 📄</button>
+                        <p class="bup-main-title">Boleta Única Municipal</p>
+                        <p class="bup-subtitle">Elecciones Rawson [Año]</p>
                     </div>
-
-                    <!-- Boleta 5 -->
-                    <div class="boleta-card">
-                        <div>
-                            <div class="boleta-header">
-                                <div class="boleta-icon">📄</div>
-                                <div class="boleta-title">Referéndum Municipal Puerto Madryn</div>
-                            </div>
-                            <p style="font-size: 13px; color: #666; margin-bottom: 15px;">Modelo oficial BUP asignado a la consulta municipal de Puerto Madryn.</p>
-                        </div>
-                        <button class="tram-btn">Ver Boleta Única 📄</button>
+                    <div class="bup-card-right">
+                        <p class="card-details-title">EJEMPLO DE DISEÑO</p>
+                        <p class="card-details-text">Este modelo ilustra la estructura de la Boleta Única de Papel (BUP) para las elecciones municipales.</p>
+                        
+                        <p class="card-details-title">CARACTERÍSTICAS</p>
+                        <p class="card-details-text">Permite al elector visualizar todas las opciones y votar por lista completa o por categorías.</p>
+                        
+                        <p class="card-details-title">FORMATO BUP</p>
+                        <p class="card-details-text">Diseño oficial con secciones para cargos municipales.</p>
                     </div>
                 </div>
             </div>
-        </section>
 
-        <!-- CRONOGRAMA ELECTORAL -->
-        <div class="container">
-            <h3 class="section-title">Cronograma del Proceso Electoral</h3>
-            <div class="timeline">
-                <div class="timeline-item left"><div class="timeline-content"><span class="date-badge">15 de Marzo</span><h3>Cierre de Padrón Provisorio</h3><p>Fecha límite para novedades registrales y reclamos.</p></div></div>
-                <div class="timeline-item right"><div class="timeline-content"><span class="date-badge">10 de Abril</span><h3>Reconocimiento de Alianzas</h3><p>Fin del plazo legal para concertar frentes electorales.</p></div></div>
-                <div class="timeline-item left"><div class="timeline-content"><span class="date-badge">05 de Mayo</span><h3>Presentación de Listas</h3><p>Oficialización de precandidatos ante juntas partidarias.</p></div></div>
-            </div>
         </div>
-    </div>
+    </section>
 
-    <!-- 5. PÁGINA PARTIDOS POLÍTICOS -->
-    <div id="partidos" class="page">
-        <section style="background: var(--color-principal); color: white; padding: 50px 8%;">
-            <h2>Partidos Políticos y SIREPPAR</h2>
-            <p>Registro, agrupaciones vigentes y guías de tramitación legal para partidos y alianzas de Chubut.</p>
-        </section>
-        <div class="container">
-            <h3 class="section-title">Agrupaciones y Reconocimientos</h3>
-            <div class="list-item-panel"><div><strong>Partido Justicialista (PJ)</strong><p style="margin:4px 0 0; font-size:13px; color:#666;">Distrito Chubut - Reconocimiento Vigente</p></div><button class="btn-sireppar" style="padding:6px 14px; font-size:12px;">Ver Ficha</button></div>
-            <div class="list-item-panel"><div><strong>Unión Cívica Radical (UCR)</strong><p style="margin:4px 0 0; font-size:13px; color:#666;">Distrito Chubut - Reconocimiento Vigente</p></div><button class="btn-sireppar" style="padding:6px 14px; font-size:12px;">Ver Ficha</button></div>
-            <div class="list-item-panel"><div><strong>Propuesta Republicana (PRO)</strong><p style="margin:4px 0 0; font-size:13px; color:#666;">Provincial - En Proceso de Recomposición</p></div><button class="btn-sireppar" style="padding:6px 14px; font-size:12px;">Ver Ficha</button></div>
-        </div>
-    </div>
-
-    <!-- 6. PÁGINA PARTICIPACIÓN -->
-    <div id="participacion" class="page">
-        <section style="background: var(--color-principal); color: white; padding: 50px 8%; text-align: center;">
-            <h2 style="font-family: 'Merriweather', Georgia, serif; font-size: 30px; font-weight: 700; margin-bottom: 10px;">Participación Ciudadana</h2>
-            <p>Fomentando el compromiso democrático y la cultura cívica en toda la comunidad.</p>
-        </section>
-        <div class="container">
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px;">
-                <div class="inst-box">
-                    <h3>Voluntarios Tecnológicos</h3>
-                    <p>Inscribite para colaborar en los procesos de fiscalización digital y soporte el día de los comicios.</p>
-                    <button class="tram-btn" style="margin-top: 15px; width: auto; padding: 10px 20px;">Postularse</button>
-                </div>
-                <div class="inst-box" style="border-top-color: var(--color-dorado);">
-                    <h3>Observatorios Cívicos</h3>
-                    <p>Espacio destinado a ONGs y universidades para auditar y seguir la transparencia del desarrollo electoral.</p>
-                    <button class="tram-btn" style="margin-top: 15px; width: auto; padding: 10px 20px; background: var(--color-dorado);">Solicitar Acreditación</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- 7. PÁGINA LEGISLACIÓN ELECTORAL -->
-    <div id="legislacion" class="page">
-        <section style="background: var(--color-principal); color: white; padding: 50px 8%;">
-            <h2>Legislación Electoral de Chubut</h2>
-            <p>Compendio normativo, leyes provinciales y resoluciones históricas de acceso público.</p>
-        </section>
-        <div class="container">
-            <h3 class="section-title">Marco Regulatorio Vigente</h3>
-            <div class="list-item-panel"><div><strong>Ley XII N° 22</strong><p style="margin:4px 0 0; font-size:13px; color:#666;">Creación y bases funcionales de la Secretaría Electoral Permanente.</p></div><button class="btn-sireppar" style="padding:6px 14px; font-size:12px;">Descargar</button></div>
-            <div class="list-item-panel"><div><strong>Ley XII N° 23</strong><p style="margin:4px 0 0; font-size:13px; color:#666;">Régimen Orgánico de los Partidos Políticos y Agrupaciones Municipales.</p></div><button class="btn-sireppar" style="padding:6px 14px; font-size:12px;">Descargar</button></div>
-            <div class="list-item-panel"><div><strong>Código Electoral Provincial</strong><p style="margin:4px 0 0; font-size:13px; color:#666;">Compilado normativo para la emisión, custodia y escrutinio del voto.</p></div><button class="btn-sireppar" style="padding:6px 14px; font-size:12px;">Descargar</button></div>
-        </div>
-    </div>
-
-    <!-- 8. PÁGINA COMUNICACIÓN -->
-    <div id="comunicacion" class="page">
-        <section style="background: var(--color-principal); color: white; padding: 50px 8%; text-align: center;">
-            <h2 style="font-family: 'Merriweather', Georgia, serif; font-size: 30px; font-weight: 700; margin-bottom: 10px;">Sala de Comunicación</h2>
-            <p>Gacetillas de prensa oficiales, anuncios y comunicados para medios informativos.</p>
-        </section>
-        <div class="container">
-            <div class="notif-bar">
-                <p><strong>[RECIENTE]</strong> Gacetilla N° 04/2026: Convocatoria oficial a reuniones informativas con apoderados partidarios.</p>
-            </div>
-            <div class="notif-bar" style="border-left-color: var(--color-dorado);">
-                <p><strong>[ARCHIVO]</strong> Anuncio N° 03/2026: Homologación del sistema digital de carga de avales SIREPPAR.</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- 9. PÁGINA CONCURSOS -->
-    <div id="concursos" class="page">
-        <section style="background: var(--color-principal); color: white; padding: 50px 8%;">
-            <h2>Concursos y Convocatorias</h2>
-            <p>Llamados a concurso público de antecedentes para cubrir cargos técnicos en el organismo.</p>
-        </section>
-        <div class="container">
-            <div class="inst-box" style="border-top-color: var(--color-tierra);">
-                <span class="date-badge" style="background: var(--color-tierra);">Próximamente</span>
-                <h3 style="margin-top: 10px;">Concurso Público para Analistas de Sistemas Electorales</h3>
-                <p>Búsqueda profesional orientada a ingenieros y licenciados para el área de auditorías de software y bases de datos.</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- 10. PÁGINA CONTACTO -->
-    <div id="contacto" class="page">
-        <section style="background: var(--color-oscuro); color: white; padding: 50px 8%;">
-            <h2>Delegaciones y Contacto Oficial</h2>
-            <p>Canales de comunicación directa y atención presencial en la Sede Central.</p>
-        </section>
-        <div class="container">
-            <div style="display:grid; grid-template-columns:1fr 1.2fr; gap:40px;">
-                <div>
-                    <h3 class="section-title">Canales de Atención</h3>
-                    <p style="margin: 10px 0;"><strong>📍 Rawson (Sede Central):</strong> Mitre 550, Legislatura Provincial</p>
-                    <p style="margin: 10px 0;"><strong>📞 Teléfono:</strong> (0280) 4481-000</p>
-                    <p style="margin: 10px 0;"><strong>📧 Correo Técnico:</strong> secretaria@electoralchubut.gov.ar</p>
-                    <p style="margin: 10px 0;"><strong>⏰ Horario:</strong> Lunes a Viernes de 08:00 a 16:00 hs.</p>
-                </div>
-                <div class="inst-box">
-                    <h3>Envíe su consulta online</h3>
-                    <form style="display:flex; flex-direction:column; gap:12px; margin-top:15px;">
-                        <input type="text" placeholder="Nombre completo" style="padding:10px; border:1px solid #ccc; border-radius:4px;">
-                        <input type="email" placeholder="Correo electrónico" style="padding:10px; border:1px solid #ccc; border-radius:4px;">
-                        <textarea placeholder="Escriba su consulta aquí..." rows="4" style="padding:10px; border:1px solid #ccc; border-radius:4px; font-family:inherit;"></textarea>
-                        <button type="button" class="tram-btn">Enviar Mensaje</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- FOOTER GLOBAL -->
-    <footer>
-        <div class="footer-main">
-            <div class="footer-brand">
-                <h2>Secretaría Electoral Permanente</h2>
-                <div class="social-row">
-                    <div class="social-icon">IG</div>
-                    <div class="social-icon">FB</div>
-                    <div class="social-icon">X</div>
-                    <div class="social-icon">TK</div>
-                    <div class="social-icon">WA</div>
-                    <div class="social-icon">YT</div>
-                </div>
-            </div>
-            <div class="footer-cols">
-                <div class="f-col">
-                    <h4>Secciones</h4>
-                    <p onclick="showPage('registros')">Padrón Electoral</p>
-                    <p onclick="showPage('procesos')">Elecciones</p>
-                    <p onclick="showPage('partidos')">Partidos Políticos</p>
-                </div>
-                <div class="f-col">
-                    <h4>Información</h4>
-                    <p onclick="showPage('institucional')">Normativa Vigente</p>
-                    <p onclick="showPage('institucional')">Resoluciones</p>
-                    <p onclick="showPage('comunicacion')">Gacetillas</p>
-                </div>
-            </div>
-        </div>
-        <div class="copy-line">
-            &copy; 2026 Secretaría Electoral Permanente de Chubut · Provincia del Chubut · Todos los derechos reservados.
-        </div>
+    <!-- Footer -->
+    <footer class="main-footer">
+        <ul>
+            <li><a href="#">Institucional</a></li>
+            <li><a href="#">Resoluciones</a></li>
+            <li><a href="#">Partidos Políticos</a></li>
+            <li><a href="#">Capacitación</a></li>
+            <li><a href="#">Trámites</a></li>
+        } </ul>
+        <p class="footer-copyright">© Secretaría Electoral Permanente - Provincia del Chubut</p>
+        <div class="footer-social">
+            <a href="#">FB</a>
+            <a href="#">TW</a>
+            <a href="#">IG</a>
+        } </div>
     </footer>
 
-    <script>
-        function showPage(id) {
-            document.querySelectorAll('.page').forEach(p => {
-                p.classList.remove('active');
-                p.style.setProperty('display', 'none', 'important');
-            });
-
-            const target = document.getElementById(id);
-            if (target) {
-                target.style.setProperty('display', 'flex', 'important');
-                target.classList.add('active');
-            }
-            
-            document.querySelectorAll('nav button').forEach(btn => btn.classList.remove('active'));
-            
-            const btnActivo = Array.from(document.querySelectorAll('nav button')).find(b => b.getAttribute('onclick').includes(id));
-            if (btnActivo) btnActivo.classList.add('active');
-            
-            window.scrollTo(0,0);
-        }
-    </script>
 </body>
 </html>
